@@ -1,0 +1,69 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.devsurf.tools</groupId>
+	<artifactId>de.devsurf.tools</artifactId>
+	<packaging>pom</packaging>
+	<name>de.devsurf.tools</name>
+	
+	<version>0.0.1-SNAPSHOT</version>
+	<description>Common Java Tools</description>
+	<url>http://github.com/manzke/tools</url>
+	<inceptionYear>2010</inceptionYear>
+	
+	<parent>
+		<groupId>de.devsurf.maven</groupId>
+		<artifactId>de.devsurf.maven</artifactId>
+		<version>1.1</version>
+	</parent>
+
+	<properties>
+		<main.basedir>${project.basedir}</main.basedir>
+	</properties>
+	
+	<scm>
+		<url>git@github.com:manzke/tools.git</url>
+		<connection>scm:git:git@github.com:manzke/tools.git</connection>
+		<developerConnection>scm:git:git@github.com:manzke/tools.git</developerConnection>
+	</scm>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<includes>
+						<include>**/AllTests.java</include>
+					</includes>
+					<forkMode>once</forkMode>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>	
+	<repositories>
+		<repository>
+			<id>maven2-repository.dev.java.net</id>
+			<name>Java.net Repository for Maven</name>
+			<url>http://download.java.net/maven/2/</url>
+		</repository>
+		<repository>
+			<id>maven-repository.dev.java.net</id>
+			<name>Java.net Maven 1 Repository (legacy)</name>
+			<url>http://download.java.net/maven/1</url>
+		</repository>
+		<repository>
+			<id>sonatype-nexus-snapshots</id>
+			<name>Sonatype Nexus Snapshots</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+</project>
