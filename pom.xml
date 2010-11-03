@@ -6,7 +6,7 @@
 	<packaging>pom</packaging>
 	<name>de.devsurf.tools</name>
 	
-	<version>0.1.0</version>
+	<version>0.1.1-SNAPSHOT</version>
 	<description>Common Java Tools</description>
 	<url>http://github.com/manzke/tools</url>
 	<inceptionYear>2010</inceptionYear>
